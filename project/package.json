@@ -1,0 +1,26 @@
+{
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "bundle": "yarn esbuild src/index.ts --bundle --outdir=dist --format=iife --global-name=_entry",
+    "addfunc": "yarn tsx build.ts",
+    "lint": "eslint",
+    "build": "yarn lint && yarn bundle && yarn addfunc",
+    "test": "vitest",
+    "start": "yarn tsx src/index.ts"
+  },
+  "devDependencies": {
+    "@types/selenium-webdriver": "^4.1.28",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "esbuild": "^0.20.2",
+    "eslint": "^9.31.0",
+    "eslint-plugin-import": "^2.32.0",
+    "selenium-webdriver": "^4.34.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.4.3",
+    "vite": "^6.3.5",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.3"
+  }
+}
